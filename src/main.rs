@@ -20,6 +20,8 @@ async fn main() -> std::io::Result<()> {
             .route("/create-post", web::post().to(PostController::create_post))
             .route("/get-user", web::get().to(UserController::get))
             .route("/create-user", web::post().to(UserController::create))
+            .route("/update-user/{id}", web::put().to(UserController::update))
+            .route("/delete-user/{id}", web::delete().to(UserController::delete))
             .route("/hey", web::get().to(manual_hello))
             .route("/post", web::post().to(coba_post))
             .route("/hey/{id}", web::get().to(get_by_id))

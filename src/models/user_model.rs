@@ -1,5 +1,5 @@
 use diesel::{
-    prelude::{Insertable, Queryable},
+    prelude::{AsChangeset, Insertable, Queryable},
     Selectable,
 };
 use serde::{Deserialize, Serialize};
@@ -24,4 +24,13 @@ pub struct NewUser {
     pub username: String,
     pub email: String,
     pub age: i32,
+}
+
+#[derive(Insertable, Serialize, Deserialize,AsChangeset)]
+#[diesel(table_name = users)]
+pub struct UpdateUser {
+    pub name: Option<String>,
+    pub username: Option<String>,
+    pub email: Option<String>,
+    pub age: Option<i32>,
 }
