@@ -1,7 +1,6 @@
 use crate::schema::posts;
 use diesel::prelude::*;
 use serde::{Deserialize, Serialize};
-pub mod user_model;
 
 #[derive(Queryable, Selectable, Deserialize, Serialize, Debug)]
 #[diesel(table_name = posts)]

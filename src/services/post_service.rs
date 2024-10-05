@@ -3,7 +3,7 @@ use diesel::{query_dsl::methods::SelectDsl, RunQueryDsl, SelectableHelper};
 
 use crate::{
     database::establish_connection,
-    models::{NewPost, Post},
+    models::post_model::{NewPost, Post},
     schema::posts,
 };
 

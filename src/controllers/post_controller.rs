@@ -1,6 +1,7 @@
 use crate::models::*;
 use crate::services::post_service::{create_post, get_posts};
 use actix_web::{web, HttpResponse, Responder};
+use post_model::Post;
 
 pub struct PostController {}
 

@@ -2,6 +2,7 @@ use crate::database::establish_connection;
 use crate::models::*;
 use actix_web::{get, post, web::Path, HttpResponse, Responder};
 use diesel::prelude::*;
+use post_model::Post;
 
 #[get("/")]
 pub async fn hello() -> impl Responder {
